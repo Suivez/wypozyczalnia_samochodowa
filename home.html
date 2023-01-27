@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+<title>RentalCar</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styleHeaderFooter.css">
+<script src="scriptDarkMode.js"></script>
+<!-- Ikony -->
+<script src="https://kit.fontawesome.com/f78f0562eb.js" crossorigin="anonymous"></script>
+<!-- Czcionka Open Sans Regular 400 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body onload="onload()" class="dark-mode">
+    <!-- Nagłówek -->
+    <div class="header-box" id="header-box-sticky">
+        <div class="logo">
+            <a href="#"><div class="image-logo"></div></a>
+        </div>
+        <div class="options-in-header">
+            <div class="text-of-options"><a href="catalog.html">Samochody</a></div>
+            <div class="text-of-options"><a href="about.html">O nas</a></div>
+            <div class="text-of-options"><a href="contact.html">Kontakt</a></div>
+        </div>
+        <div class="login-register-option">
+            <div class="text-of-login-register-options"><a href="login.html">Zaloguj</a></div>
+            <div class="text-of-login-register-options">/</div>
+            <div class="text-of-login-register-options"><a href="register.html">Zarejestruj</a></div>
+            <div class="text-of-login-register-options"><button class="dark-mode-btn" onclick="darkmode()"><i class="fa-solid fa-circle-half-stroke"></i></button></div>
+        </div>
+    </div>
+    <!-- Baner -->
+    <div class="cover-box">
+        <div class="cover-image"><img src="images/285e7913ab69f53ae3237b69280d83ba.jpg"></div>
+        <div class="text-cover">
+            <div class="title-of-text-cover">Szybko, tanio i bezpiecznie</div>
+            <div class="subtitle-of-text-cover">U nas wypożyczysz sprawny samochód, w rozsądnej cenie<br> i bezpiecznie</div>
+        </div>
+    </div>
+    <!-- Reklamy -->
+    <!--
+    <div class="ads-box">
+        <div class="big-ad"></div>
+        <div class="small-ads-box">
+            <div class="small-ad"></div>
+            <div class="small-ad"></div>
+        </div>
+    </div>
+    -->
+    <!-- Opcje wyboru poradników, innych stron itd. -->
+    <div class="choose-options-box">
+        <a href="catalog.html">
+            <div class="choose-option">
+                <div class="ad-image-choose-option"><i class="fa-solid fa-folder-tree"></i></div>
+                <div style="width: 500px;">
+                    <div class="title-choose-option">Katalog dostępnych samochodów</div>
+                    <div class="subtitle-choose-option">Zobacz naszą bogatą ofertę pojazdów gotowych do wypożyczenia już teraz!
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="contact.html">
+            <div class="choose-option">
+                <div class="ad-image-choose-option"><i class="fa-solid fa-question"></i></div>
+                <div style="width: 500px;">
+                    <div class="title-choose-option">Zadaj nam pytanie</div>
+                    <div class="subtitle-choose-option">Masz pytanie odnośnie jakiegoś konkretnego samochodu, 
+                        a może jesteś ciekawy jak to wszystko po prostu działa? Zadaj nam pytanie a my odpowiemy na nie błyskawicznie.</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- Opcje wyboru najpopularniejszych pojazdów -->
+    <div class="options-box">
+        <div class="title-options-box">
+            <div class="text-title-options">Najpopularniejsze</div>
+        </div>
+    </div>
+    <div class="popular-choose-options-box">
+        <a href="car_pages/description_opel_astra.html">
+            <div class="popular-choose-option">
+                <div class="image-choose-option" style="background-image:url(car_images/opel_astra_15_diesel/1.jpg)">
+                    <div class="magnifier-on-hover">
+                        <div class="text-magnifier-on-hover">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="title-choose-option">Opel Astra</div>
+                    <div class="price-choose-option">139zł/dzień</div>
+                    <div class="specs-choose-option">
+                        Silnik: 1.5 diesel<br>
+                        Moc: 130 KM<br>
+                        Typ nadwozia: Hatchback<br>
+                        Skrzynia biegów: Automatyczna
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="car_pages/description_volvo_xc60.html">
+            <div class="popular-choose-option">
+                <div class="image-choose-option" style="background-image:url(car_images/volvo_xc60_20_hybrid/1.jpg)">
+                    <div class="magnifier-on-hover">
+                        <div class="text-magnifier-on-hover">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="title-choose-option">Volvo XC60</div>
+                    <div class="price-choose-option">209zł/dzień</div>
+                    <div class="specs-choose-option">
+                        Silnik: 2.0 hybryda<br>
+                        Moc: 211 KM<br>
+                        Typ nadwozia: SUV<br>
+                        Skrzynia biegów: Automatyczna
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="car_pages/description_ford_focus.html">
+            <div class="popular-choose-option">
+                <div class="image-choose-option" style="background-image:url(car_images/ford_focus_10_hybrid/1.jpg)">
+                    <div class="magnifier-on-hover">
+                        <div class="text-magnifier-on-hover">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="title-choose-option">Ford Focus</div>
+                    <div class="price-choose-option">119zł/dzień</div>
+                    <div class="specs-choose-option">
+                        Silnik: 1.0 hybryda<br>
+                        Moc: 155 KM<br>
+                        Typ nadwozia: kombi<br>
+                        Skrzynia biegów: manualna
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- Opcje wyboru najnowszych dodanych pojazdów -->
+    <div class="options-box">
+        <div class="title-options-box">
+            <div class="text-title-options">Najnowsze pojazdy w Naszej firmie</div>
+        </div>
+    </div>
+    <div class="newest-choose-options-box">
+        <a href="car_pages/description_bmw_x1.html">
+            <div class="newest-choose-option">
+                <div class="image-newest-choose-option" style="background-image: url(car_images/bmw_x1_15_hybrid/1.jpg)">
+                    <div class="new-stamp-image-newest-choose-option">NEW</div>
+                    <div class="magnifier-on-hover">
+                        <div class="text-magnifier-on-hover">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="title-choose-option">BWM X1</div>
+                    <div class="price-choose-option">189zł/dzień</div>
+                    <div class="specs-choose-option">
+                        Silnik: 1.5 hybryda<br>
+                        Moc: 220 KM<br>
+                        Typ nadwozia: SUV<br>
+                        Skrzynia biegów: Automatyczna
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="car_pages/description_mercedes_cla200.html">
+            <div class="newest-choose-option">
+                <div class="image-newest-choose-option" style="background-image: url(car_images/mercedes_cla200_13_benz/1.jpg)">
+                    <div class="new-stamp-image-newest-choose-option">NEW</div>
+                    <div class="magnifier-on-hover">
+                        <div class="text-magnifier-on-hover">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="title-choose-option">Mercedes CLA 200</div>
+                    <div class="price-choose-option">180zł/dzień</div>
+                    <div class="specs-choose-option">
+                        Silnik: 1.3 benzyna<br>
+                        Moc: 163 KM<br>
+                        Typ nadwozia: sedan<br>
+                        Skrzynia biegów: Automatyczna
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="car_pages/description_ford_puma.html">
+            <div class="newest-choose-option">
+                <div class="image-newest-choose-option" style="background-image: url(car_images/ford_puma_10_hybrid/1.jpg)">
+                    <div class="new-stamp-image-newest-choose-option">NEW</div>
+                    <div class="magnifier-on-hover">
+                        <div class="text-magnifier-on-hover">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="title-choose-option">Ford Puma</div>
+                    <div class="price-choose-option">121zł/dzień</div>
+                    <div class="specs-choose-option">
+                        Silnik: 1.0 hybryda<br>
+                        Moc: 125 KM<br>
+                        Typ nadwozia: SUV<br>
+                        Skrzynia biegów: manualna
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!-- Stopka -->
+    <div class="footer-box">
+        <div class="empty-box"></div>
+        <div class="options-in-footer">
+            <div class="text-option"><a href="#">Regulamin</a></div>
+            <div class="text-option"><a href="#">Polityka prywatności</a></div>
+            <div class="text-option"><a href="#">Polityka cookies</a></div>
+        </div>
+        <div class="social-options-box">
+            <div class="social-option"><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+            <div class="social-option"><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+            <div class="social-option"><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="copyright-text">
+            &copy; Copyright 2022
+        </div>
+    </div>
+</body>
+</html>

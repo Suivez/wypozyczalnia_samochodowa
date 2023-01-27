@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+<title>Mercedes Benz A Klasa - Rental Car</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../styleHeaderFooter.css">
+<link rel="stylesheet" href="styleDescription.css">
+<script defer src="script.js"></script>
+<script src="../scriptDarkMode.js"></script>
+<!-- Ikony -->
+<script src="https://kit.fontawesome.com/f78f0562eb.js" crossorigin="anonymous"></script>
+<!-- Czcionka Open Sans Regular 400 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body onload="onload()" class="dark-mode">
+    <!-- Nagłówek -->
+    <div class="header-box" id="header-box-sticky">
+        <div class="logo">
+            <a href="../home.html"><div class="image-logo"></div></a>
+        </div>
+        <div class="options-in-header">
+            <div class="text-of-options"><a href="../catalog.html">Samochody</a></div>
+            <div class="text-of-options"><a href="../about.html">O nas</a></div>
+            <div class="text-of-options"><a href="../contact.html">Kontakt</a></div>
+        </div>
+        <div class="login-register-option">
+            <div class="text-of-login-register-options"><a href="../login.html">Zaloguj</a></div>
+            <div class="text-of-login-register-options">/</div>
+            <div class="text-of-login-register-options"><a href="../register.html">Zarejestruj</a></div>
+            <div class="text-of-login-register-options"><button class="dark-mode-btn" onclick="darkmode()"><i class="fa-solid fa-circle-half-stroke"></i></button></div>
+        </div>
+    </div>
+    <!--Opis oferty pojazdu-->
+    <div class="content-desc-box">
+        <div class="image-gallery-box">
+            <!--IMAGE GALLERY-->
+            <div class="slideshow-container">
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 4</div>
+                  <img src="../car_images/mercedes_benzA_13_benz/1.jpg">
+                </div>
+              
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 4</div>
+                  <img src="../car_images/mercedes_benzA_13_benz/2.jpg">
+                </div>
+              
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 4</div>
+                  <img src="../car_images/mercedes_benzA_13_benz/3.jpg">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="../car_images/mercedes_benzA_13_benz/4.jpg">
+                  </div>
+              
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+              <br>
+              
+              <!-- The dots/circles -->
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+              </div>
+        </div>
+        <div class="order-box">
+            <div class="title-of-car">
+                Mercedes A-Klasa
+            </div>
+            <div class="text-price">
+                180zł/dzień
+            </div>
+            <div class="submit-order">
+                <button data-modal-target="#modal" id="button-order" class="submit-order-button">Zamów</button>
+            </div>
+        </div>
+        <!-- POPUP -->
+        <div class="modal" id="modal">
+            <div class="popup-header">
+                <div class="popup-header-title">Złóż zamówienie</div>
+                <button data-close-button class="close-button"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="popup-content">
+                <label>data odbioru</label>
+                <input type="date" min="2023-01-01">
+                <label>data zwrotu</label>
+                <input type="date">
+                <button class="submit-order-button">Zamów</button>
+            </div>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <div class="full-desc-of-car-box">
+        <div class="full-desc-content">
+            <h2>Szczegóły</h2>
+            <div style="display: flex;">
+                <div class="f-box">
+                    Silnik<br>
+                    Moc<br>
+                    Typ nadwozia<br>
+                    Marka pojazdu<br>
+                    Model pojazdu<br>
+                    Rok produkcji<br>
+                    Napęd<br>
+                    Skrzynia biegów<br>
+                    Klimatyzacja<br>
+                    Kolor<br>
+                    Liczba drzwi<br>
+                    Liczba miejsc<br>
+                </div>
+                <div class="s-box">
+                    1.3 benzyna<br>
+                    163 KM<br>
+                    Hatchback<br>
+                    Mercedes<br>
+                    A-Klasa<br>
+                    2018<br>
+                    4x4<br>
+                    Automatyczna<br>
+                    Sprawna<br>
+                    Szary mat<br>
+                    5<br>
+                    5<br>
+                </div>
+            </div>
+        </div>
+        <div class="empty-div"></div>
+    </div>
+     <!-- Stopka -->
+     <div class="footer-box" style="align-items: center">
+        <div class="empty-box"></div>
+        <div class="options-in-footer">
+            <div class="text-option"><a href="#">Regulamin</a></div>
+            <div class="text-option"><a href="#">Polityka prywatności</a></div>
+            <div class="text-option"><a href="#">Polityka cookies</a></div>
+        </div>
+        <div class="social-options-box"></div>
+    </div>
+    <!-- SKRYPT IMAGE GALLERY-->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
